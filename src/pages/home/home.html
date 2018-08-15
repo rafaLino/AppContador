@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title>Contador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background" (tap)="Increment();">
+  <ion-grid>
+    <ion-row margin-vertical>
+      <ion-col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12>
+        <svg class="svg" height="300" width="330">
+          <circle class="circle" cx="170" cy="150" r="150" stroke="black" stroke-width="5" fill="white" />
+          <text class="text" x="60" y="220" fill="black">{{ contador | contador}}</text>
+        </svg>
+      </ion-col>
+    </ion-row>
+    <ion-row margin-top>
+      <ion-col col-9 offset-3 col-sm-9 offset-sm-3 col-md-9 offset-md-3 col-lg-9 offset-lg-9 col-xl-9 offset-xl-3>
+        <button ion-button round outline color="light" (click)="Reset();">Zerar</button>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
