@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicView } from '../../util/IonicView';
+import { Vibration } from '@ionic-native/vibration';
 
 
 @Component({
@@ -8,23 +9,23 @@ import { IonicView } from '../../util/IonicView';
 })
 export class HomePage implements IonicView {
 
-  public contador : number;
+  public contador: number;
 
-  constructor(){
+  constructor(
+    private vibration : Vibration
+  ) {
     this.Reset();
   }
-  ionViewDidLoad(){
+  ionViewDidLoad() {
     this.Reset();
   }
-  Increment(){
+
+  Increment() {
     this.contador++;
+    this.vibration.vibrate(15);
   }
 
-  Decrement(){
-    this.contador--;
-  }
-
-  Reset(){
+  Reset() {
     this.contador = 0;
   }
 

@@ -7,7 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { PipesModule } from '../pipes/pipes.module';
-
+import { Vibration } from '@ionic-native/vibration'
 @NgModule({
   declarations: [
     MyApp,
@@ -26,6 +26,7 @@ import { PipesModule } from '../pipes/pipes.module';
   providers: [
     StatusBar,
     SplashScreen,
+    Vibration,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
